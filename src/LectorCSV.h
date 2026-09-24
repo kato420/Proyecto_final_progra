@@ -10,6 +10,7 @@
 class LectorCSV
 {
 public:
+  /////// PRIMERO
   static std::vector<Pelicula> leer_peliculas(const std::string &ruta_archivo)
   {
     std::vector<Pelicula> lista_peliculas;
@@ -21,6 +22,7 @@ public:
       return lista_peliculas;
     }
 
+    ///// SEGUNDO
     std::string linea_temp;
     std::string fila_completa = "";
     bool en_comillas = false;
@@ -28,6 +30,7 @@ public:
 
     std::getline(archivo, linea_temp);
 
+    //// TERCERO
     while (std::getline(archivo, linea_temp))
     {
       fila_completa += linea_temp;
@@ -46,6 +49,7 @@ public:
         continue;
       }
 
+      //// CUARTO
       std::vector<std::string> campos;
       std::string campo_actual = "";
       bool dentro_de_comillas_campo = false;
@@ -67,6 +71,7 @@ public:
         }
       }
       campos.push_back(campo_actual);
+      //// QUINTO
 
       if (campos.size() >= 8)
       {
