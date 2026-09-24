@@ -1,5 +1,5 @@
 #include "Plataforma.h"
-#include <algorithm>
+#include <algorithm> // para std::min
 #include <iostream>
 #include <string>
 #include <vector>
